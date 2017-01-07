@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>AGSoft</title>
+
+    <link rel="stylesheet" href="public/agsoft.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Página ${pagina}</h1>
+
+    <form method="post" action="@{Application.challenge}">
+
+    #{authenticityToken /}
+
+        <input type="hidden" name="requestToken" value="${responseToken}"/>
+
+        <p>O <i>token</i> da vez é: <b>${responseToken}</b></p>
+
+        <p>
+            Quanto é
+            <span class="operador">${operatorA}</span>
+            <span class="simbolo">${symbol}</span>
+            <span class="operador">${operatorB}</span>
+            ?
+        </p>
+
+        <div class="control bar">
+
+            <input type="text" name="captcha" class="captcha" placeholder="Resposta"/>
+
+            <input type="submit"/>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

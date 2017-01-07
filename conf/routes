@@ -1,0 +1,4 @@
+GET     /                                       Application.index
+POST    /                                       Application.challenge
+GET     /favicon.ico                            404
+GET     /public/                                staticDir:public

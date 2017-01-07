@@ -1,0 +1,54 @@
+html, body {
+    font-size: 16px;
+}
+
+body {
+    background: #f5f5f5;
+    margin: 25px;
+}
+
+.container {
+    background: #fff;
+    max-width: 800px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 25px;
+    text-align: justify;
+}
+
+ul li {
+    margin: 10px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.operador {
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+}
+
+.control.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control.bar input {
+    padding: 10px 0;
+    margin: 2px;
+    width: 100px;
+    text-align: center;
+    outline: 0;
+    border: 1px solid #aaa;
+    text-transform: uppercase;
+}

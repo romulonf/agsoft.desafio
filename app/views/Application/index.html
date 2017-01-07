@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>AGSoft</title>
+
+    <link rel="stylesheet" href="public/agsoft.css"/>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <form method="post" action="@{Application.challenge}">
+
+    #{authenticityToken /}
+
+        <h1>Desafio</h1>
+
+        <p>Um <i>token</i> composto por <b>64</b> caracteres vai ser exibido cada vez que uma nova página for
+            carregada</p>
+
+        <p>O desafio consiste em descobrir de forma programática o <i>token</i> da página <b>1000</b></p>
+
+        <h1>Regras</h1>
+
+        <p>A solução deve ser desenvolvida utilizando JAVA</p>
+
+        <h1>O que deve ser enviado?</h1>
+
+        <p>Envie um email para <a href="mailto:romulo.ferreira@agsoft.com.br">romulo.ferreira@agsoft.com.br</a> com o
+            valor do <i>token</i> e um arquivo compactado
+            contendo as classes utilizadas para solução do desafio</p>
+
+        <h1>O que vai ser avaliado?</h1>
+
+        <ul>
+            <li>A resposta correta</li>
+            <li>O tempo para envio da solução</li>
+            <li>O código utilizado para a solução</li>
+        </ul>
+
+        <h1>Pronto para o desafio?</h1>
+
+        <p>Basta clicar no botão abaixo!</p>
+
+        <div class="control bar">
+
+            <input type="submit" value="começar"/>
+
+        </div>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>
