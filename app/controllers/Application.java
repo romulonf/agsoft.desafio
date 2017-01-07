@@ -99,6 +99,7 @@ public class Application extends Controller {
             }
 
         } catch (Exception ex) {
+            flash.put("error", "O captcha informado é inválido");
             error("O captcha informado é inválido");
         }
 
