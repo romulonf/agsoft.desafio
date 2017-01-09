@@ -4,11 +4,36 @@ import constants.Constantes;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.math.NumberUtils;
 import org.apache.commons.lang.math.RandomUtils;
+import play.mvc.Before;
 import play.mvc.Controller;
+import play.mvc.Http;
 
 import java.math.BigDecimal;
 
 public class Application extends Controller {
+
+    @Before
+    static void enableCORS() {
+
+        Http.Header originHeader = request.headers.get("origin");
+
+        String allowMethods = "GET, POST, PUT, DELETE, OPTIONS";
+
+        if (originHeader != null) {
+
+            String allowOrigin = originHeader.value();
+
+            response.accessControl(allowOrigin, allowMethods, true);
+
+        } else {
+
+            response.accessControl("*", allowMethods, false);
+
+        }
+
+        response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
+
+    }
 
     enum Operation {
 
@@ -26,6 +51,10 @@ public class Application extends Controller {
             return symbol;
         }
 
+    }
+
+    public static void preflight() {
+        ok();
     }
 
     public static void index() {
